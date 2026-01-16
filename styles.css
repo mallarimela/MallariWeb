@@ -1,0 +1,347 @@
+/* Navigation Styles */
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffb6c1;
+  padding: 15px 0;
+  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  background: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+/* Pink line effect when clicked/active */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #ff1493;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after,
+nav ul li a:active::after,
+nav ul li a.active::after {
+  width: 80%;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+nav ul li a:active {
+  transform: translateY(0);
+}
+
+/* Header title above navigation */
+.header-title {
+  background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
+  text-align: center;
+  padding: 2.5rem 0 2rem 0;
+  border-bottom: 4px solid #ff69b4;
+  box-shadow: 0 5px 20px rgba(255, 182, 193, 0.3);
+}
+
+.header-title h1 {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+}
+
+.header-title h2 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: 'Georgia', serif;
+  margin: 0.8rem 0 0 0;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(255, 105, 180, 0.2);
+}
+
+/* Background for all pages */
+body {
+  background: linear-gradient(135deg, #ffe4e9 0%, #ffc0cb 50%, #ffb6c1 100%);
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 70px;
+  color: #333;
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+
+/* Enhanced homepage styling */
+#homepage {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 15px 50px rgba(255, 182, 193, 0.4);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 192, 203, 0.5);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.homepage-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.profile-pic {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.text-content {
+  flex: 1;
+}
+
+#homepage h3 {
+  display: none;
+}
+
+/* Refined motto styling */
+.motto {
+  background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
+  border-left: 5px solid #ff1493;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+  max-width: 700px;
+}
+
+.motto p {
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(255, 105, 180, 0.2);
+}
+
+/* Professional fun facts */
+.fun-facts {
+  background: linear-gradient(135deg, #ffe4e9, #ffc0cb);
+  padding: 2.5rem;
+  border-radius: 20px;
+  margin-top: 2.5rem;
+  box-shadow: 0 8px 30px rgba(255, 182, 193, 0.3);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fun-facts h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+}
+
+.fun-facts ul {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.fun-facts li {
+  background: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid #ff1493;
+  box-shadow: 0 5px 20px rgba(255, 182, 193, 0.2);
+  font-size: 1.05rem;
+  color: #555;
+  transition: all 0.3s ease;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.fun-facts li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.35);
+  border-left-width: 6px;
+  background: #fff5f7;
+}
+
+.fun-facts .icon {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+/* Refined profile photo */
+.profile-pic img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 8px solid #ffb6c1;
+  box-shadow: 0 15px 50px rgba(255, 182, 193, 0.5);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(255, 105, 180, 0.6);
+}
+
+/* Enhanced footer */
+.footer {
+  background: linear-gradient(to right, #ffb6c1, #ffc0cb);
+  color: white;
+  padding: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 -5px 20px rgba(255, 182, 193, 0.3);
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Original styles for other pages */
+h1 { 
+  margin: 10px 0 0 0;
+  font-size: 18px;
+  background: pink;
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  color: #222;
+}
+
+section {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+li {
+  list-style-position: inside;
+  border: 10px;
+  width: 80%;
+  margin: 20px auto;
+  background: #D3D3D3;
+  padding: 10px;
+  text-align: left;
+}
+
+.social-icon:hover {
+  background: #ff69b4;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.social-icon {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 105, 180, 0.1);
+}
+
+
+.skills-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.bar-background {
+  background-color: #f1f1f1; 
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.bar-fill {
+  background-color: pink; 
+  color: white;
+  padding: 5px 0;
+  text-align: right;
+  padding-right: 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.html { width: 90%; }
+.css { width: 80%; }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8 | Ethics in Computing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #fff5f8 0%, #ffe4ec 50%, #ffd9e8 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #5a3a4a;
+        }
+
+        /* Header */
+        .header-title {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+            text-align: center;
+            padding: 2rem 0 1.5rem 0;
+            border-bottom: 3px solid #d4758f;
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+            color: #8b4567;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #e8b4c8;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #8b4567;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            font-family: 'Segoe UI', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #c2185b;
+            transform: translateX(-5px);
+        }
+
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #8b4567;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom: 3px solid #d4758f;
+            padding-bottom: 1rem;
+        }
+
+        /* Lesson Detail Boxes */
+        .lesson-detail-box {
+            background: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(212, 117, 143, 0.15);
+            overflow: hidden;
+            border: 2px solid #f4d3dd;
+            transition: all 0.3s ease;
+        }
+
+        .lesson-detail-box:hover {
+            box-shadow: 0 6px 20px rgba(212, 117, 143, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .box-header {
+            background: linear-gradient(135deg, #d4758f 0%, #c2185b 100%);
+            color: #ffffff;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .box-content {
+            padding: 2rem 1.5rem;
+            line-height: 1.8;
+        }
+
+        .box-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #5a3a4a;
+            text-align: justify;
+        }
+
+        .box-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .box-content ul li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1rem;
+            color: #5a3a4a;
+        }
+
+        .box-content ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #d4758f;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .box-content strong {
+            color: #8b4567;
+            font-weight: 600;
+        }
+
+        .box-content em {
+            font-style: italic;
+            color: #8b4567;
+        }
+
+        /* References */
+        .references {
+            font-size: 0.9rem;
+            color: #7a5a6a;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-left: 4px solid #d4758f;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #e8b4c8, #d4758f);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        footer p {
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .box-header {
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+
+            .box-content {
+                padding: 1.5rem 1rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Lesson Gallery</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="lesson.html" class="active">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="lesson.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Lessons
+        </a>
+
+        <h2 class="section-title">Lesson 8: Ethics in Computing</h2>
+
+        <div class="lesson-detail-box">
+            <div class="box-header">1. Responsibility</div>
+            <div class="box-content">
+                <p>Establishing the three pillars of responsible technology use is essential for every computing professional.</p>
+                <ul>
+                    <li><strong>Legal Issues:</strong> Focuses on strict compliance with government regulations and data laws.</li>
+                    <li><strong>Ethics:</strong> Acts as a moral compass to determine if an action is "right" or "fair," even if not explicitly forbidden by law.</li>
+                    <li><strong>Societal Issues:</strong> Examines how technological choices impact the well-being of the community and the evolution of culture.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lesson-detail-box">
+            <div class="box-header">2. Ownership</div>
+            <div class="box-content">
+                <p>Intellectual Property Rights (IPR) protect the creations of the mind in the digital space.</p>
+                
+                <ul>
+                    <li><strong>Copyright:</strong> Provides creators with the exclusive legal right to manage, publish, and sell their work.</li>
+                    <li><strong>Plagiarism:</strong> The unauthorized replication of ideas and language; strictly prohibited in academic and professional fields.</li>
+                    <li><strong>Case Study:</strong> Real-world legal battles, such as <em>Silicon Knights v. Epic Games</em>, serve as reminders to respect software licensing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lesson-detail-box">
+            <div class="box-header">3. Misconduct</div>
+            <div class="box-content">
+                <p>Digital environments face various forms of misuse that can harm individuals and industries.</p>
+                <ul>
+                    <li><strong>Cyberbullying:</strong> Using social platforms for humiliation or harassment.</li>
+                    <li><strong>Phishing:</strong> Deceptive practices used to steal sensitive financial or personal data.</li>
+                    <li><strong>Digital Piracy:</strong> Robs creators of revenue through the unlawful duplication of digital goods.</li>
+                    <li><strong>Computer Addiction:</strong> Highlights the personal cost of excessive technology use on daily human interaction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lesson-detail-box">
+            <div class="box-header">4. Legislation</div>
+            <div class="box-content">
+                <p>In the Philippines, specific laws ensure system integrity and protect users.</p>
+                <ul>
+                    <li><strong>R.A. 10175 (Cybercrime Prevention Act of 2012):</strong> The primary legal defense against digital threats.</li>
+                    <li><strong>Criminalized Acts:</strong> Specifically targets Illegal Access (hacking), Data Interference (unauthorized alteration), and Online Libel.</li>
+                    <li><strong>Consequences:</strong> Ensures there are real-world legal penalties for digital actions that harm others.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="references">
+            <strong>References:</strong> COMP001 Module 07: Legal, Ethical, and Societal Issues; Republic Act No. 10175 (Cybercrime Prevention Act of 2012).
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Melanie E. Mallari Portfolio</p>
+    </footer>
+</body>
+</html>

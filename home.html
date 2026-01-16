@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="styles.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Portfolio</title>
+   <style>
+   /* Additional styles for homepage - add these to your styles.css */
+   
+   /* Header title above navigation */
+   .header-title {
+       background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+       text-align: center;
+       padding: 2rem 0 1.5rem 0;
+       border-bottom: 3px solid #ff69b4;
+   }
+   
+   .header-title h1 {
+       font-size: 2.5rem;
+       color: #c2185b;
+       font-family: 'Georgia', serif;
+       margin: 0;
+       padding: 0;
+       background: none;
+       font-weight: 700;
+       letter-spacing: 2px;
+   }
+   
+   .header-title h2 {
+       font-size: 1.2rem;
+       color: #ff69b4;
+       font-family: 'Georgia', serif;
+       margin: 0.5rem 0 0 0;
+       font-weight: 400;
+       letter-spacing: 3px;
+       text-transform: uppercase;
+   }
+   
+   /* Name header styling */
+   .name-header {
+       text-align: center;
+       margin-bottom: 2rem;
+       padding: 1.5rem 0;
+   }
+   
+   .name-header h1 {
+       font-size: 3rem;
+       color: #c2185b;
+       font-family: 'Georgia', serif;
+       margin: 0;
+       padding: 0;
+       background: none;
+       font-weight: 700;
+       letter-spacing: 1px;
+   }
+   
+   .name-header h2 {
+       font-size: 1.5rem;
+       color: #ff69b4;
+       font-family: 'Georgia', serif;
+       margin: 0.5rem 0 0 0;
+       font-weight: 400;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+   }
+   
+   /* Background image for all pages */
+   body {
+       background-image: url('your-image-name.jpg'); /* Replace with your image filename */
+       background-size: cover;
+       background-position: center;
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+   }
+   
+   /* Optional: Add a semi-transparent overlay for better text readability */
+   body::before {
+       content: '';
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(255, 255, 255, 0.85);
+       z-index: -1;
+   }
+   
+   /* Enhanced homepage styling */
+   #homepage {
+       background: rgba(255, 255, 255, 0.95);
+       border-radius: 20px;
+       box-shadow: 0 10px 40px rgba(255, 105, 180, 0.2);
+       backdrop-filter: blur(10px);
+   }
+   
+   .container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 3rem;
+   }
+   
+   #homepage h3 {
+       display: none;
+   }
+   
+   /* Refined motto styling */
+   .motto {
+       background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+       border-left: 5px solid #ff69b4;
+       padding: 1.5rem;
+       border-radius: 12px;
+       margin: 2rem 0;
+       box-shadow: 0 5px 20px rgba(255, 105, 180, 0.15);
+   }
+   
+   .motto p {
+       font-family: 'Georgia', serif;
+       font-size: 1.2rem;
+       color: #d1477a;
+       font-weight: 500;
+       margin: 0;
+   }
+   
+   /* Professional fun facts */
+   .fun-facts {
+       background: rgba(255, 240, 245, 0.6);
+       padding: 2rem;
+       border-radius: 15px;
+       margin-top: 2.5rem;
+   }
+   
+   .fun-facts h3 {
+       color: #c2185b;
+       font-size: 1.6rem;
+       margin-bottom: 1.5rem;
+       font-weight: 600;
+       text-align: center;
+       font-family: 'Georgia', serif;
+   }
+   
+   .fun-facts ul {
+       display: grid;
+       gap: 1rem;
+   }
+   
+   .fun-facts li {
+       background: white;
+       padding: 1rem 1.5rem;
+       border-radius: 12px;
+       border-left: 4px solid #ff69b4;
+       box-shadow: 0 3px 15px rgba(255, 105, 180, 0.1);
+       font-size: 1.05rem;
+       color: #555;
+       transition: all 0.3s ease;
+   }
+   
+   .fun-facts li:hover {
+       transform: translateX(10px);
+       box-shadow: 0 5px 25px rgba(255, 105, 180, 0.25);
+       border-left-width: 6px;
+   }
+   
+   .fun-facts .icon {
+       margin-right: 1rem;
+       font-size: 1.8rem;
+   }
+   
+   /* Refined profile photo */
+   .profile-pic img {
+       width: 280px;
+       height: 280px;
+       border-radius: 50%;
+       border: 6px solid #ff69b4;
+       box-shadow: 0 10px 40px rgba(255, 105, 180, 0.3);
+       object-fit: cover;
+   }
+   
+   /* Enhanced footer */
+   .footer {
+       background: linear-gradient(to right, #ff9eb5, #ffb6c1);
+       color: white;
+       padding: 1.5rem;
+       font-weight: 500;
+       letter-spacing: 0.5px;
+       box-shadow: 0 -5px 15px rgba(255, 105, 180, 0.2);
+       text-align: center;
+   }
+   </style>
+</head>
+<body>
+ 
+   <header>
+       <div class="header-title">
+           <h1>Melanie E. Mallari</h1>
+           <h2>Future IT Professional</h2>
+       </div>
+       <nav>
+           <ul>
+               <li><a href="home.html">Home</a></li>
+               <li><a href="skills.html">Skills</a></li>
+               <li><a href="lesson.html">Lesson</a></li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
+       </nav>
+   </header>
+   
+   <section id="homepage">
+       <div class="container">
+           <div class="homepage-content">
+               <div class="profile-pic">
+                   <img src="melanie.jpg" alt="My Profile Photo" class="profile-photo">
+               </div>
+               <div class="text-content"> 
+                   <div class="motto">
+                       <p>"Code with passion, create with heart, and never stop learning."</p>
+                   </div>
+                   
+                   <div class="fun-facts">
+                       <h3>Fun Facts About Me</h3>
+                       <ul>
+                           <li><span class="icon">☕</span> I can code for hours fueled by coffee and good music!</li>
+                           <li><span class="icon">🎮</span> I can make games using JavaScript.</li>
+                           <li><span class="icon">🐱</span> My cat is my unofficial debugging assistant.</li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+  
+   <footer class="footer">
+       © 2025 Melanie E. Mallari Portfolio
+   </footer>
+ 
+</body>
+</html>

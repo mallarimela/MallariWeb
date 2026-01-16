@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Gallery | My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-title {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+            text-align: center;
+            padding: 2rem 0 1.5rem 0;
+            border-bottom: 3px solid #ff69b4;
+        }
+        
+        .header-title h1 {
+            font-size: 2.5rem;
+            color: #c2185b;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .header-title h2 {
+            font-size: 1.2rem;
+            color: #ff69b4;
+            font-family: 'Georgia', serif;
+            margin: 0.5rem 0 0 0;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background-color: #ffb6c1;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        main p {
+            color: #fff;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .lesson-card {
+            background: #fff;
+            border: 3px solid #ffb6c1;
+            border-radius: 15px;
+            padding: 2.5rem 1.5rem;
+            text-decoration: none;
+            color: #ff69b4;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.5);
+            border-color: #ff69b4;
+            background: linear-gradient(135deg, #fff 0%, #fff5f7 100%);
+        }
+
+        .lesson-card i {
+            font-size: 3rem;
+            color: #ff69b4;
+            transition: all 0.3s ease;
+        }
+
+        .lesson-card:hover i {
+            transform: scale(1.2);
+            color: #ff1493;
+        }
+
+        .lesson-card h3 {
+            font-size: 1.3rem;
+            text-align: center;
+            color: #ff69b4;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #ffb6c1;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        footer p {
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .lesson-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Lesson Gallery</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="lesson.html">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content-page">
+        <h2 class="section-title">Lesson Gallery</h2>
+        <p style="margin-bottom: 40px;">Select the topic below to see full details.</p>
+        
+        <div class="lesson-grid">
+            <a href="lesson1.html" class="lesson-card">
+                <i class="fa-solid fa-building"></i>
+                <h3>Computing Industry</h3>
+            </a>
+            <a href="lesson2.html" class="lesson-card">
+                <i class="fa-solid fa-microscope"></i>
+                <h3>Computing & Sciences</h3>
+            </a>
+            <a href="lesson3.html" class="lesson-card">
+                <i class="fa-solid fa-computer"></i>
+                <h3>The Computing System</h3>
+            </a>
+            <a href="lesson4.html" class="lesson-card">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>Binary Arithmetic</h3>
+            </a>
+            <a href="lesson5.html" class="lesson-card">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Digital Logic System</h3>
+            </a>
+            <a href="lesson6.html" class="lesson-card">
+                <i class="fa-solid fa-photo-film"></i>
+                <h3>Electronic Media</h3>
+            </a>
+            <a href="lesson7.html" class="lesson-card">
+                <i class="fa-solid fa-wifi"></i>
+                <h3>The Internet</h3>
+            </a>
+            <a href="lesson8.html" class="lesson-card">
+                <i class="fa-solid fa-gavel"></i>
+                <h3>Ethics in Computing</h3>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Melanie E. Mallari Portfolio</p>
+    </footer>
+</body>
+</html>
